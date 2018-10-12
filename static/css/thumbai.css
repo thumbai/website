@@ -1,0 +1,167 @@
+/* Copyright Jeevanandam M. (https://github.com/jeevatkm, jeeva@myjeeva.com)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. */
+
+body {
+  padding-top: 4.5rem;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+/* IE10 viewport hack for Surface/desktop Windows 8 bug
+ * See the Getting Started docs for more information:
+ * http://getbootstrap.com/getting-started/#support-ie10-width
+ */
+  @-ms-viewport     { width: device-width; }
+  @-o-viewport      { width: device-width; }
+  @viewport         { width: device-width; }
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
+.navbar-nav .active.font-weight-bold {
+  font-weight: 500!important;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+/* app/index.html */
+@media all and (max-width: 601px) {
+  .homepage .thumbai-purpose {
+    font-size: 80%;
+  }
+}
+.homepage .thumbai-dash-screenshot {
+  width: 70%;
+}
+.homepage .thumbai-dash-screenshot {
+  width: 100%;
+  height: 100%;
+}
+
+/* docs/* */
+.docs-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+.docs-wrapper #docsSidebar {
+  margin-top: -15px;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 100vh;
+  background: rgb(136, 136, 136);
+  color: #fff;
+  transition: all 0.3s;
+}
+.docs-wrapper #docsSidebar.active {
+  margin-left: -300px;
+}
+.docs-wrapper #docsSidebar .sidebar-header {
+    padding: 20px;
+}
+.docs-wrapper #docsSidebar ul p {
+    color: #fff;
+    padding: 10px;
+    padding-top:10px;
+    padding-bottom: 5px;
+}
+.docs-wrapper #docsSidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #fff;
+    padding-left: 20px;
+}
+.docs-wrapper #docsSidebar ul li a:hover {
+    color: rgb(82, 81, 81);
+    background: #fff;
+    text-decoration: none;
+}
+.docs-wrapper #docsSidebar ul li.active > a, a[aria-expanded="true"] {
+    background: #fff;
+    color:  rgb(82, 81, 81);
+    font-weight: 500!important;
+}
+.docs-wrapper #docsSidebar ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: rgb(136, 136, 136);
+}
+@media (max-width: 768px) {
+  .docs-wrapper #docsSidebar {
+      margin-left: -300px;
+  }
+  .docs-wrapper #docsSidebar.active {
+      margin-left: 0;
+  }
+  .docs-wrapper #docsSidebarCollapse span {
+      display: none;
+  }
+}
+.docs-wrapper #docsContent {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+/* footer.html */
+@media all and (max-width:800px) {
+  .footer {
+    /* position: relative !important; */
+  }
+}
+.footer {
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+  font-size: 85%;
+}
+.footer a {
+  color:inherit;
+}
+.footer a:hover {
+  color: #2780e3;
+  text-decoration: none;
+}
+.footer .thumbai-license-info {
+  font-size: 85%;
+}
+.footer .sponsors .h4 {
+  color: #484848;
+}
+.footer .sponsors .keycdn {
+  padding-top: 5px;
+}
+.footer .sponsors .keycdn img {
+  width: 100px;
+  height: 30px;
+  opacity: 0.8;
+}
+.footer .credit-info {
+  font-size: 70%;
+  color: #6c757dcc;
+}
+.footer .credit-info a {
+  color: inherit;
+}

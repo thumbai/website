@@ -1,0 +1,39 @@
+<!-- Copyright Jeevanandam M. (https://github.com/jeevatkm, jeeva@myjeeva.com)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
+
+<nav class="navbar navbar-expand-md navbar-light border-bottom fixed-top bg-white">
+    <div class="navbar-brand"></div>
+    {{ if .IsDocs }}<button type="button" id="docsSidebarCollapse" class="btn btn-secondary mr-auto">
+        <i class="fas fa-align-left"></i>
+    </button>{{ end }}
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right pr-3" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Get Started</a>
+            </li>
+            <li class="nav-item {{ if .IsDocs }}active font-weight-bold{{ end }}">
+                <a class="nav-link" href="{{ rurl . "docs_index" }}">Documentation {{ if .IsDocs }}<span class="sr-only">(current)</span>{{ end }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Downloads</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+    </div>
+</nav>

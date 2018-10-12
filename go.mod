@@ -1,9 +1,9 @@
 module thumbai.app/website
 
 require (
-	aahframe.work/aah v0.0.0-20181004182112-4091c311fdc9
+	aahframe.work v0.0.0-20181012164055-c2968613b629
 	cloud.google.com/go v0.30.0 // indirect
-	github.com/go-aah/forge v0.0.0-20180822163742-5469132a713e // indirect
+	github.com/go-aah/forge v0.0.0-20181012163755-64756c63c547 // indirect
 	github.com/go-playground/locales v0.12.1 // indirect
 	github.com/go-playground/universal-translator v0.16.0 // indirect
 	github.com/gobwas/httphead v0.0.0-20180130184737-2c6c146eadee // indirect

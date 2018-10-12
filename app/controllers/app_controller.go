@@ -15,7 +15,7 @@
 package controllers
 
 import (
-  "aahframe.work/aah"
+  "aahframe.work"
 
   "thumbai.app/website/app/models"
 )

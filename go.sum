@@ -1,9 +1,10 @@
-aahframe.work/aah v0.0.0-20181004182112-4091c311fdc9 h1:QArqkQKYjHXX8Jpg4ix29i80DpowKSICJUTW9mGYF0k=
-aahframe.work/aah v0.0.0-20181004182112-4091c311fdc9/go.mod h1:YEJCDMw29O7ZNXnlUVzpDxHq+vBBtaYHjBwMtwfnqCU=
+aahframe.work v0.0.0-20181012164055-c2968613b629 h1:dotsi7CKASgy27RNPD0vAF7QpKk7B5+chu5m1B9D2Zs=
+aahframe.work v0.0.0-20181012164055-c2968613b629/go.mod h1:ZQVSANNtgA0JbjE4gLdQttTTISXNbG1kvPVRtOySqq8=
+aahframe.work v0.11.4 h1:rw/VcZ3xvqXk7UrxMm6HtWzKPljOn27Z4duCVl5QeSk=
 cloud.google.com/go v0.30.0 h1:xKvyLgk56d0nksWq49J0UyGEeUIicTl4+UBiX1NPX9g=
 cloud.google.com/go v0.30.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
-github.com/go-aah/forge v0.0.0-20180822163742-5469132a713e h1:VnhhkAOLI9na398gRxSBj5iF4a4Sk2ndvfJ79+TkpZw=
-github.com/go-aah/forge v0.0.0-20180822163742-5469132a713e/go.mod h1:noFuP/1ZMLfYHd/CpUGNdlXgqeRaYiEkj7WsCdqnlvc=
+github.com/go-aah/forge v0.0.0-20181012163755-64756c63c547 h1:W3neDakkkEj+CUIy3LOTCVc/lY9wx9PmoZQ9kgkPTnk=
+github.com/go-aah/forge v0.0.0-20181012163755-64756c63c547/go.mod h1:noFuP/1ZMLfYHd/CpUGNdlXgqeRaYiEkj7WsCdqnlvc=
 github.com/go-playground/locales v0.12.1 h1:2FITxuFt/xuCNP1Acdhv62OzaCiviiE4kotfhkmOqEc=
 github.com/go-playground/locales v0.12.1/go.mod h1:IUMDtCfWo/w/mtMfIE/IG2K+Ey3ygWanZIBtBW0W2TM=
 github.com/go-playground/universal-translator v0.16.0 h1:X++omBR/4cE2MNg91AoC3rmGrCjJ8eAeUP/K/EKx4DM=

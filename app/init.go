@@ -18,7 +18,7 @@
 package main
 
 import (
-	"aahframe.work/aah"
+	"aahframe.work"
 	// Registering HTML minifier
 	// _ "aahframe.work/html-minify"
 )

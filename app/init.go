@@ -20,7 +20,7 @@ package main
 import (
 	"aahframe.work"
 	// Registering HTML minifier
-	// _ "aahframe.work/html-minify"
+	_ "aahframe.work/minify/html"
 )
 
 func init() {

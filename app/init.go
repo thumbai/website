@@ -21,6 +21,8 @@ import (
 	"aahframe.work"
 	// Registering HTML minifier
 	_ "aahframe.work/minify/html"
+
+	"thumbai.app/website/app/article"
 )
 
 func init() {
@@ -50,6 +52,7 @@ func init() {
 	// aah.OnStart(db.Connect)
 	// aah.OnStart(cache.Load)
 	aah.OnStart(SubscribeHTTPEvents)
+	aah.OnStart(article.LoadConfig)
 
 	// Event: OnPreShutdown
 	// Doc: https://docs.aahframework.org/server-extension.html#event-onpreshutdown

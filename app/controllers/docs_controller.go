@@ -15,7 +15,12 @@
 package controllers
 
 import (
+	"path/filepath"
+
 	"aahframe.work"
+	"aahframe.work/essentials"
+	
+	"thumbai.app/website/app/article"
 )
 
 // DocsController serve the THUMBAI documentation.
@@ -23,9 +28,29 @@ type DocsController struct {
 	*aah.Context
 }
 
+// Before interceptor
+func (c *DocsController) Before() {
+	c.AddViewArg("IsHome", false)
+}
+
 // Index shows docs homepage
 func (c *DocsController) Index() {
-	c.Reply().Ok().HTMLl("docs.html", aah.Data{
+	c.Reply().Redirect(c.RouteURL("show_doc", "introduction"))
+}
+
+// ShowDoc method serves requested documentation content.
+func (c *DocsController) ShowDoc(doc string) {
+	p := filepath.Join(aah.AppBaseDir(), "docs", doc+".md")	
+	if ess.IsFileExists(p) {
+		article, _ := article.Get(p)
+		c.Reply().HTMLl("docs.html", aah.Data{
+			"IsDocs": true,
+			"Article": article,
+		})
+		return 
+	}
+
+	c.Reply().HTMLl("docs.html", aah.Data{
 		"IsDocs": true,
 	})
 }

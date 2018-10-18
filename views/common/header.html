@@ -22,17 +22,14 @@ limitations under the License. -->
     </button>
     <div class="collapse navbar-collapse text-right pr-3" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Get Started</a>
-            </li>
+            {{ if not .IsHome }}<li class="nav-item">
+                <a class="nav-link" href="{{ rurl . "home" }}">Home</a>
+            </li>{{ end }}
             <li class="nav-item {{ if .IsDocs }}active font-weight-bold{{ end }}">
-                <a class="nav-link" href="{{ rurl . "docs_index" }}">Documentation {{ if .IsDocs }}<span class="sr-only">(current)</span>{{ end }}</a>
+                <a class="nav-link" href="{{ rurl . "docs_home" }}">Documentation {{ if .IsDocs }}<span class="sr-only">(current)</span>{{ end }}</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Downloads</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+            <li class="nav-item {{ if .IsLatestRelease }}active font-weight-bold{{ end }}">
+                <a class="nav-link" href="{{ rurl . "latest_release" }}">Downloads {{ if .IsLatestRelease }}<span class="sr-only">(current)</span>{{ end }}</a>
             </li>
         </ul>
     </div>

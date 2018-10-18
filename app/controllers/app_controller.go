@@ -15,9 +15,9 @@
 package controllers
 
 import (
-  "aahframe.work"
+  "net/http"
 
-  "thumbai.app/website/app/models"
+  "aahframe.work"
 )
 
 // AppController struct application controller
@@ -25,15 +25,16 @@ type AppController struct {
   *aah.Context
 }
 
+// Before interceptor
+func (c *AppController) Before() {
+  c.AddViewArg("IsHome", false)
+}
+
 // Index method is application's home page.
 func (c *AppController) Index() {
-  data := aah.Data{
-    "Greet": models.Greet{
-      Message: "A Go Mod Repository, Go Vanity and Simple Proxy Server",
-    },
-  }
-
-  c.Reply().Ok().HTML(data)
+  c.Reply().Ok().HTML(aah.Data{
+    "IsHome": true,
+  })
 }
 
 // ComingSoon display banner.
@@ -41,4 +42,9 @@ func (c *AppController) ComingSoon() {
   c.Reply().Ok().HTML(aah.Data{
     "IsComingSoon": true,
   })
+}
+
+// LatestRelease method to provides information on latest release.
+func (c *AppController) LatestRelease() {
+  c.Reply().RedirectWithStatus("https://github.com/thumbai/thumbai/releases/latest", http.StatusFound)
 }

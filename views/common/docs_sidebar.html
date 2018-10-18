@@ -14,23 +14,16 @@ limitations under the License. -->
 
 <!-- Sidebar -->
 <nav id="docsSidebar">
+    {{ if .Article }}
     <div class="sidebar-header">        
         <h4>Table of Contents</h4>
-    </div>
+    </div>    
     <ul class="list-unstyled components">
-        <li>
-            <a href="#">Home 1</a>
-        </li>
-        <li>
-            <a href="#">Home 2</a>
-        </li>
-        <li>
-            <a href="#">Home 3</a>
-        </li>
-        <li class="active">
-            <a href="#">About</a>
-        </li>
+        {{ range $i, $v := .Article.TOC }}<li>
+            <a href="{{ $v.AnchorTag }}">{{ $v.Name }}</a>
+        </li>{{ end }}
     </ul>
+    {{ end }}
 </nav>
 <script>
     window.jqReady(function () {

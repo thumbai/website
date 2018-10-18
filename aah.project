@@ -13,7 +13,7 @@
 build {
   # Application binary name
   # Default value is `name` attribute value from `aah.conf`
-  #binary_name = "website"
+  #binary_name = "thumbai-website"
 
   # Used as fallback if
   #   - `git commit sha` or
@@ -81,7 +81,7 @@ hot_reload {
   watch {
     # Note: static directory is not required to be monitored since aah server
     # delivers up-to-date file on environment profile `dev`.
-    dir_excludes = [".*", "vendor", "build", "logs"]
+    dir_excludes = [".*", "vendor", "build", "logs", "docs"]
 
     file_excludes = [".*", "*.pid", "_test.go", "LICENSE", "README.md"]
   }

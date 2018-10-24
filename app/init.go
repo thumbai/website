@@ -51,8 +51,8 @@ func init() {
 	//
 	// aah.OnStart(db.Connect)
 	// aah.OnStart(cache.Load)
-	aah.OnStart(SubscribeHTTPEvents)
-	aah.OnStart(article.LoadConfig)
+	aah.App().OnStart(SubscribeHTTPEvents)
+	aah.App().OnStart(article.LoadConfig)
 
 	// Event: OnPreShutdown
 	// Doc: https://docs.aahframework.org/server-extension.html#event-onpreshutdown
@@ -72,7 +72,7 @@ func init() {
 	// Executed in the order they are defined. It is recommended; NOT to change
 	// the order of pre-defined aah framework middleware's.
 	//__________________________________________________________________________
-	aah.AppHTTPEngine().Middlewares(
+	aah.App().HTTPEngine().Middlewares(
 		aah.RouteMiddleware,
 		aah.CORSMiddleware,
 		aah.BindMiddleware,

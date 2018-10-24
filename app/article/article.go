@@ -174,7 +174,7 @@ func RemoveCacheByFile(mdPath string) {
 // ClearCache method clears the Markdown cache.
 func ClearCache(_ *aah.Event) {
 	if len(articleCache) > 0 {
-		aah.AppLog().Info("Clearing cache")
+		aah.App().Log().Info("Clearing cache")
 	}
 	mu.Lock()
 	articleCache = make(map[string]*models.Article)
@@ -183,7 +183,7 @@ func ClearCache(_ *aah.Event) {
 
 // LoadConfig gets markdown related config value
 func LoadConfig(_ *aah.Event) {
-	cfg := aah.AppConfig()
+	cfg := aah.App().Config()
 	isCacheEnabled = cfg.BoolDefault("markdown.cache", false)
 
 	// Dynamica URL placement

@@ -40,7 +40,7 @@ func (c *DocsController) Index() {
 
 // ShowDoc method serves requested documentation content.
 func (c *DocsController) ShowDoc(doc string) {
-	p := filepath.Join(aah.AppBaseDir(), "docs", doc+".md")	
+	p := filepath.Join(aah.App().BaseDir(), "docs", doc+".md")	
 	if ess.IsFileExists(p) {
 		article, _ := article.Get(p)
 		c.Reply().HTMLl("docs.html", aah.Data{

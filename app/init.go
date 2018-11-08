@@ -26,6 +26,7 @@ import (
 )
 
 func init() {
+	app := aah.App()
 
 	//‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 	// Server Extensions
@@ -51,8 +52,8 @@ func init() {
 	//
 	// aah.OnStart(db.Connect)
 	// aah.OnStart(cache.Load)
-	aah.App().OnStart(SubscribeHTTPEvents)
-	aah.App().OnStart(article.LoadConfig)
+	app.OnStart(SubscribeHTTPEvents)
+	app.OnStart(article.LoadConfig)
 
 	// Event: OnPreShutdown
 	// Doc: https://docs.aahframework.org/server-extension.html#event-onpreshutdown
@@ -72,7 +73,7 @@ func init() {
 	// Executed in the order they are defined. It is recommended; NOT to change
 	// the order of pre-defined aah framework middleware's.
 	//__________________________________________________________________________
-	aah.App().HTTPEngine().Middlewares(
+	app.HTTPEngine().Middlewares(
 		aah.RouteMiddleware,
 		aah.CORSMiddleware,
 		aah.BindMiddleware,
@@ -122,7 +123,6 @@ func init() {
 	// validator := aah.Validator()
 	//
 	// // Add your validation funcs
-
 }
 
 //‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾

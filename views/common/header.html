@@ -17,6 +17,9 @@ limitations under the License. -->
     {{ if .IsDocs }}<button type="button" id="docsSidebarCollapse" class="btn btn-secondary mr-auto">
         <i class="fas fa-align-left"></i>
     </button>{{ end }}
+    <div class="release-info">
+        Latest release v{{ config "thumabi_release.latest" }}, {{ config "thumabi_release.date" }}
+    </div>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,6 +33,9 @@ limitations under the License. -->
             </li>
             <li class="nav-item {{ if .IsLatestRelease }}active font-weight-bold{{ end }}">
                 <a class="nav-link" href="{{ rurl . "latest_release" }}">Downloads {{ if .IsLatestRelease }}<span class="sr-only">(current)</span>{{ end }}</a>
+            </li>
+            <li class="nav-item {{ if .IsAbout }}active font-weight-bold{{ end }}">
+                <a class="nav-link" href="{{ rurl . "about" }}">About {{ if .IsAbout }}<span class="sr-only">(current)</span>{{ end }}</a>
             </li>
         </ul>
     </div>

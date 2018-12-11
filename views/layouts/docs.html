@@ -21,6 +21,7 @@ limitations under the License. -->
     {{ block "title" . }}
     <title>Default page title from master layout</title>
     {{ end }}
+    {{ template "meta_tags" . }}
     {{ include "/common/head_tags.html" . }}
   </head>
   <body>
@@ -37,3 +38,5 @@ limitations under the License. -->
     <script>$(window.jqReadyFuncs).each(function (k, fn) { fn(); });</script>
   </body>
 </html>
+
+{{ define "meta_tags" }}{{ end }}

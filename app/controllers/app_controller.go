@@ -15,36 +15,41 @@
 package controllers
 
 import (
-  "net/http"
+	"net/http"
 
-  "aahframe.work"
+	"aahframe.work"
 )
 
 // AppController struct application controller
 type AppController struct {
-  *aah.Context
+	*aah.Context
 }
 
 // Before interceptor
 func (c *AppController) Before() {
-  c.AddViewArg("IsHome", false)
+	c.AddViewArg("IsHome", false)
 }
 
 // Index method is application's home page.
 func (c *AppController) Index() {
-  c.Reply().Ok().HTML(aah.Data{
-    "IsHome": true,
-  })
+	c.Reply().Ok().HTML(aah.Data{
+		"IsHome": true,
+	})
 }
 
 // ComingSoon display banner.
 func (c *AppController) ComingSoon() {
-  c.Reply().Ok().HTML(aah.Data{
-    "IsComingSoon": true,
-  })
+	c.Reply().Ok().HTML(aah.Data{
+		"IsComingSoon": true,
+	})
 }
 
 // LatestRelease method to provides information on latest release.
 func (c *AppController) LatestRelease() {
-  c.Reply().RedirectWithStatus("https://github.com/thumbai/thumbai/releases/latest", http.StatusFound)
+	c.Reply().RedirectWithStatus("https://github.com/thumbai/thumbai/releases/latest", http.StatusFound)
+}
+
+// About serves the about page of THUMBAI app.
+func (c *AppController) About() {
+	c.Reply().Ok()
 }

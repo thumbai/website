@@ -20,7 +20,11 @@ limitations under the License. -->
     </div>    
     <ul class="list-unstyled components">
         {{ range $i, $v := .Article.TOC }}<li>
-            <a href="{{ $v.AnchorTag }}">{{ $v.Name }}</a>
+            {{ if $v.Link }}
+            <a href="{{ $v.Link }}">{{ $v.Name }}</a>
+            {{ else }}
+            <span>{{ $v.Name }}</span>
+            {{ end }}
         </li>{{ end }}
     </ul>
     {{ end }}

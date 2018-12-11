@@ -10,7 +10,13 @@ label {
   pages {
     app {
       index {
-        title = "aah framework application - Home"
+        title = "Welcome to THUMBAI - A Go Mod Repository, Go Vanity and Simple Proxy Server"
+      }
+    }
+
+    docs {
+      show_doc {
+        title_suffix = "THUMBAI Documentation"
       }
     }
   }

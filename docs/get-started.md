@@ -3,52 +3,51 @@ Desc: Getting started with THUMBAI application
 Keywords: get started, getting started with thumbai
 ---
 Download|#download
-Update Configuration|#update-configuration
+Update thumbai.conf|#update-configuration
 Run THUMBAI app|#run-thumbai-app
-Using systemd|#using-systemd-to-manage-thumbai
+Command Help|#command-help-to-know-more
+______________________________
+Introduction|/docs/introduction
+Configuration|/docs/configuration
+Security|/docs/security
+Configuring systemd service|/docs/systemd
 ---
 ## Download
 
-Download appropriate platform targeted binaries from here https://thumbai.app/releases/latest.
+Download THUMBAI binary from <a href="https://thumbai.app/releases/latest" target="_blank">https://thumbai.app/releases/latest</a>.
 
-Binary archive contains thumbai binary, License, `thumbai.service` and `thumbai.conf`.
+Binary archive contains-
+
+* THUMBAI binary
+* thumbai.service
+* thumbai.conf
+* LICENSE.txt
+* CREDITS.txt
 
 
 ## Update Configuration
 
-Open file `thumbai.conf` in your favorite editor and update configuration as per your use case.
+Open the file `thumbai.conf` in your favorite editor and update required configuration section and keys.
 
-Refer to [Configuration](/docs/configuration) and [Security](/docs/security) docs as needed.
+Refer to [Configuration](/docs/configuration) and [Security](/docs/security) documentation as needed.
+
+Section / Key | Description
+------------- | -----------
+`thumbai.admin.host` | Host address to be used to access to thumbai admin interface and Go Mod Repository. <br>For e.g.: `https://example.com/thumbai` and `GOPROXY=https://example.com/repo`
+`thumbai.server { ... }` | THUMBAI server port no., SSL cert OR Let's Encrypt cert
+`thumbai.security.session { ... }`<br>`thumbai.security.anti_csrf { ... }`| Use handy command `thumbai generate securekeys` to get secure keys for Sessiona & Anti-CSRF. 
+
 
 ## Run THUMBAI app
 
 ```bash
-# Let's say you have extract thumbai into /home/app
-/home/app/thumbai -config thumbai.conf
+# Let's say, THUMBAI archive extracted into `/home/app`.
+# You could run -
+/home/app/thumbai run --config /home/app/thumbai.conf
 ```
 
-## Using systemd to manage THUMBAI
-
-If you would like to manage THUMBAI using `systemd` then update file `thumbai.service` and install it.
-
-Installation Steps-
-
-* Place your `thumbai.service` file at `/etc/systemd/system/`
-* Execute `sudo systemctl daemon-reload` to reload the newly configured service file
-* Execute `sudo systemctl enable thumbai.service` to enable `thumbai.service` with systemd
-
-Congrats, you have successfully configured thumbai service with systemd.
-
-Now you can do -
+## Command `help` to know more
 
 ```bash
-sudo systemctl start thumbai.service
-# OR
-sudo service thumbai start
-```
-
-```bash
-sudo systemctl status thumbai.service
-# OR
-sudo service thumbai status
+/home/app/thumbai help
 ```

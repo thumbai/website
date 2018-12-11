@@ -44,6 +44,13 @@ a[data-toggle="collapse"] {
     transform: translateY(-50%);
 }
 
+.release-info {
+  font-size: 1rem;
+  font-weight: 450;
+  color: rgba(0,0,0,.5) !important;
+  padding-left: 25px;
+}
+
 /* app/index.html */
 @media all and (max-width: 601px) {
   .homepage .thumbai-purpose {
@@ -56,6 +63,22 @@ a[data-toggle="collapse"] {
 .homepage .thumbai-dash-screenshot {
   width: 100%;
   height: 100%;
+}
+
+/* app/about.html */
+.about-thumbai {
+  padding: 30px 50px;
+}
+.about-thumbai h1 {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.about-thumbai p,
+.about-thumbai li {
+  font-size:1.2rem
+}
+.about-thumbai .about {
+  padding-bottom: 50px;
 }
 
 /* docs/* */
@@ -85,7 +108,8 @@ a[data-toggle="collapse"] {
     padding-top:10px;
     /* padding-bottom: 5px; */
 }
-.docs-wrapper #docsSidebar ul li a {
+.docs-wrapper #docsSidebar ul li a,
+.docs-wrapper #docsSidebar ul li span {
     padding: 5px;
     font-size: 1.1em;
     display: block;

@@ -10,7 +10,7 @@ Security|/docs/security
 ---
 # Overview
 
-THUMBAI application was developed for [aah framework](https://aahframework.org) website purpose then I have made it generizalied and with reasonable user interface to make it user friendly for Go community.
+Initially THUMBAI app features are developed for [aah framework](https://aahframework.org) then I have decedied to make it generalized form with simple web interface for Go community.
 
 Description  | URL Format
 ----------- | -----------
@@ -20,12 +20,12 @@ Go Mod Proxy | `GOPROXY=<host:port>/repo`
 
 # Features
 
-THUMBAI app provides features to have your own - 
+THUMBAI features provides an ability to have your own- 
 
-* Go Modules Respository for your organization
-* Decouple SCM repository import path using Go Vanity 
-* In case if you have hosted servers behind simply proxy it. 
+* Go Modules Respository - for organization/individual, never loose dependency libraries.
+* Go Vanity Service - Decouple SCM repository path from Go import path.
+* Simple Proxy Server - Hosted applications on the same box then simply proxy it behind.
 
-Every feature is on-demand and individual use. Above use cases fully utilized by aahframework.org and aahframe.work, THUMBAI replaced my nginx proxy server.
+Every feature is on-demand and could be used individually. All THUMBAI features fully utilized by `aahframework.org`, `aahframe.work` and also THUMBAI proxy replaced my nginx proxy server.
 
 

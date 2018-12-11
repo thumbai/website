@@ -1,0 +1,42 @@
+<!-- Copyright Jeevanandam M. (https://github.com/jeevatkm, jeeva@myjeeva.com)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
+
+{{ define "title" -}}
+<title>Welcome to THUMBAI</title>
+{{- end }}
+
+{{ define "body" -}}
+<div class="container-fluid h-100">
+    <div class="row about-thumbai">
+        <div class="about-project-name">
+            <h1>About Project Name</h1>
+            <p>Initially I thought of having project name as <code>gorepositree</code>. Then I have changed my thoughts and started looking for name without any feature name included in it. I did my findings and finally choosen THUMBAI as a project name.</p>
+            <p><strong>THUMBAI</strong> is a flower name (Binomial name: <a href="https://en.wikipedia.org/wiki/Leucas_aspera" target="_blank">Leucas aspera</a>).</p>
+        </div>
+        <div class="about">
+            <h1>About</h1>
+            <p>
+                Initially THUMBAI app features are developed for <a href="https://aahframework.org" target="_blank">aah framework</a> then I have decedied to make it generalized form with simple web interface for Go community.
+            </p>
+            <img src="/static/img/thumbai-logo-dark-256.png" alt="thumbai logo" class="float-right pt-5 mt-4" />
+            <p class="h5">THUMBAI features provides an ability to have your own-</p>
+            <ul class="mt-4" style="list-style:none;">
+                <li class="pt-1"><i class="fas fa-hand-point-right" aria-hidden="true"></i>&nbsp;&nbsp;Go Modules Respository - for organization/individual, never loose dependency libraries.</li>
+                <li class="pt-3"><i class="fas fa-hand-point-right" aria-hidden="true"></i>&nbsp;&nbsp;Go Vanity Service - Decouple SCM repository path from Go import path.</li>
+                <li class="pt-3"><i class="fas fa-hand-point-right" aria-hidden="true"></i>&nbsp;&nbsp;Simple Proxy Server - Hosted applications on the same box then simply proxy it behind.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{{- end }}

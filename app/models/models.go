@@ -26,6 +26,6 @@ type Article struct {
 
 // TocLink represents single link of table of contents.
 type TocLink struct {
-	Name      string
-	AnchorTag string
+	Name string
+	Link string
 }

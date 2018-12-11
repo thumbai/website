@@ -108,7 +108,7 @@ func Parse(lines []string) *models.Article {
 			if len(parts) == 1 {
 				article.TOC = append(article.TOC, models.TocLink{Name: parts[0]})
 			} else {
-				article.TOC = append(article.TOC, models.TocLink{Name: parts[0], AnchorTag: parts[1]})
+				article.TOC = append(article.TOC, models.TocLink{Name: parts[0], Link: parts[1]})
 			}
 		}
 	}
@@ -218,4 +218,3 @@ func lineNumByDelimiter(lines []string, delim string) int {
 	}
 	return pos
 }
-

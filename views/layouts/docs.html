@@ -25,6 +25,10 @@ limitations under the License. -->
     {{ include "/common/head_tags.html" . }}
   </head>
   <body>
+    {{ if eq .EnvProfile "prod" -}}<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZ9MDJK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->{{ end }}
     <script>window.jqReadyFuncs = []; window.jqReady = function (fn) { window.jqReadyFuncs.push(fn); }</script>
     {{ if not .IsComingSoon }}{{- include "header.html" . -}}{{ end }}
     <div class="docs-wrapper">

@@ -10,7 +10,7 @@ label {
   pages {
     app {
       index {
-        title = "Welcome to THUMBAI - A Go Mod Repository, Go Vanity and Simple Proxy Server"
+        title = "Welcome to THUMBAI - A Go Mod Repository, Go Vanity Server and Proxy Server"
       }
     }
 

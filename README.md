@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://thumbai.app/static/img/thumbai-logo-dark-256.png" />
-  <p align="center">Go Mod Repository, Go Vanity Server and Proxy Server</p>
+  <p align="center">A Go Mod Repository, Go Vanity Server and Proxy Server</p>
 </p>
 <p align="center">
     Go to https://thumbai.app for more info.

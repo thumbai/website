@@ -11,6 +11,7 @@ Introduction|/docs/introduction
 Configuration|/docs/configuration
 Security|/docs/security
 Configuring systemd service|/docs/systemd
+Upgrade|/docs/upgrade
 ---
 ## Download
 

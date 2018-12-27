@@ -1,7 +1,7 @@
 module thumbai.app/website
 
 require (
-	aahframe.work v0.12.1
+	aahframe.work v0.12.2
 	aahframe.work/minify/html v0.2.0
 	github.com/russross/blackfriday v1.5.2
 	github.com/tdewolff/test v1.0.0 // indirect

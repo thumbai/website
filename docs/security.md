@@ -11,6 +11,7 @@ ______________________________
 Introduction|/docs/introduction
 Get Started|/docs/get-started
 Configuring systemd service|/docs/systemd
+Upgrade|/docs/upgrade
 ---
 # Security Configuration
 

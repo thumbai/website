@@ -7,6 +7,7 @@ ______________________________
 Introduction|/docs/introduction
 Configuration|/docs/configuration
 Security|/docs/security
+Upgrade|/docs/upgrade
 ---
 # Configuring systemd service
 
